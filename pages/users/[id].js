@@ -17,7 +17,7 @@ import styles from "../../styles/Home.module.css";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function personTable() {
+export default function PersonTable() {
   const { query } = useRouter();
   const { data, error } = useSWR(
     () => query.id && `/api/people/${query.id}`,
